@@ -70,8 +70,8 @@ Task("Build")
 .IsDependentOn("InitializeBuild")
 .Does(() =>
 	{
-	Information(proj);
 	foreach(var proj in ProjList)
+	Information(proj);
 		MSBuild(proj, new MSBuildSettings()
 			.SetConfiguration(configuration)
 			.SetMSBuildPlatform(MSBuildPlatform.Automatic)
