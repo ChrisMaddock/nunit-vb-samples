@@ -70,6 +70,7 @@ Task("Build")
 .IsDependentOn("InitializeBuild")
 .Does(() =>
 	{
+	Information(proj);
 	foreach(var proj in ProjList)
 		MSBuild(proj, new MSBuildSettings()
 			.SetConfiguration(configuration)
