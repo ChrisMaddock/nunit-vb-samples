@@ -1,14 +1,12 @@
 language: csharp
 sudo: false
 
-env:
- global:
-  - EnableNuGetPackageRestore=true 
-  
 mono:
   - latest
 
 install:
+  - curl -Lsfo tools/ https://www.nuget.org/nuget.exe
   - nuget install Cake -Version 0.6.4 -OutputDirectory tools/
+  
 script: 
   - mono tools/Cake.0.6.4/Cake.exe build.cake
