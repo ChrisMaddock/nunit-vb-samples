@@ -76,7 +76,7 @@ Task("Build")
 		MSBuild(proj, new MSBuildSettings()
 			.SetConfiguration(configuration)
 			.SetMSBuildPlatform(MSBuildPlatform.Automatic)
-			.SetVerbosity(Verbosity.Minimal)
+			.SetVerbosity(Verbosity.Verbose)
 			.SetNodeReuse(false));
 	}
 
