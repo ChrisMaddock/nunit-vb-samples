@@ -71,15 +71,11 @@ Task("Build")
 .Does(() =>
 	{
 	foreach(var proj in ProjList)
-	{
-		Information(proj);
 		MSBuild(proj, new MSBuildSettings()
 			.SetConfiguration(configuration)
 			.SetMSBuildPlatform(MSBuildPlatform.Automatic)
 			.SetVerbosity(Verbosity.Verbose)
 			.SetNodeReuse(false));
-	}
-
 	});
 
 //////////////////////////////////////////////////////////////////////

@@ -1,5 +1,10 @@
 language: csharp
 sudo: false
+
+env:
+ global:
+  - EnableNuGetPackageRestore=true 
+  
 mono:
   - latest
 
