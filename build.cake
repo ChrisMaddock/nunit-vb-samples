@@ -75,7 +75,8 @@ Task("Build")
 			.SetConfiguration(configuration)
 			.SetMSBuildPlatform(MSBuildPlatform.Automatic)
 			.SetVerbosity(Verbosity.Minimal)
-			.SetNodeReuse(false));
+			.SetNodeReuse(false)
+			.UseToolVersion(MSBuildToolVersion.NET20));
 	});
 
 //////////////////////////////////////////////////////////////////////
